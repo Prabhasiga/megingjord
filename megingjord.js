@@ -6,5 +6,5 @@ app.use('/', express.static(__dirname + '/app'));
 var port = process.env.PORT || 8080;
 
 app.listen(port, function () {
-    console.log('ERP webapp...listening on port %d!', this.address().port);
+    console.log('App listening on port %d!', this.address().port);
 });
