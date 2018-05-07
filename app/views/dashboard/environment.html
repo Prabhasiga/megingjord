@@ -1,0 +1,38 @@
+<div class="wrapper-md" ng-controller="EnvironmentController as ctrl">
+	<a class="pull-right">MegingJord</a>
+	<div class="row"><h1>Environment <small> - Details about dev environment</small>  </h1></div>
+	<div id="exTab1" class="row">
+		<ul class="nav nav-pills">
+			<li ng-class="{active : ctrl.selectedEnv === 'hod'}">
+				<a ng-click="ctrl.switchTab('hod')" data-toggle="tab"> HOD</a>
+			</li>
+			<li ng-class="{active : ctrl.selectedEnv === 'logan'}">
+				<a ng-click="ctrl.switchTab('logan')" data-toggle="tab"> LOGAN </a>
+			</li>
+		</ul>
+		<br>
+
+		<div class="tab-content clearfix">
+			<div class="tab-pane active">
+				<table class="table table-bordered table-responsive table-hover">
+					<thead>
+					<tr>
+						<th> Environment </th>
+						<th> Developer </th>
+						<th> Branch </th>
+						<th> Database </th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr ng-repeat="envrn in ctrl.environmentDetails track by $index">
+						<td>{{envrn.environment}}</td>
+						<td>{{envrn.developer}}</td>
+						<td>{{envrn.branch}}</td>
+						<td>{{envrn.database}}</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

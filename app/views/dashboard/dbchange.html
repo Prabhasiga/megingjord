@@ -1,0 +1,70 @@
+<div class="wrapper-md" ng-controller="DBChangeController as ctrl">
+    <toaster-container
+            toaster-options="{'position-class': 'toast-top-center', 'close-button':true}"></toaster-container>
+    <a class="pull-right">MegingJord</a>
+    <div class="row"><h1>Change DB </h1></div>
+    <br>
+    <div id="exTab1" class="row">
+        <ul class="nav nav-pills">
+            <li ng-class="{active : ctrl.systemUiSelected === 'hod'}">
+                <a ng-click="ctrl.switchTab('hod')" data-toggle="tab"> HOD</a>
+            </li>
+            <li ng-class="{active : ctrl.systemUiSelected === 'logan'}">
+                <a ng-click="ctrl.switchTab('logan')" data-toggle="tab"> LOGAN </a>
+            </li>
+        </ul>
+        <br>
+    </div>
+    <div class="tab-content clearfix">
+        <div class="tab-pane active">
+            <table class="table table-bordered table-responsive table-hover">
+                <thead>
+                <tr>
+                    <th> Environment Details</th>
+                    <th> Database Environment </th>
+                    <th> Database Name </th>
+                    <th> Actions </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="envrn in ctrl.environmentDetails track by $index">
+                    <td>
+                        <span>
+                            <h3>{{envrn.environment}}</h3>
+                            <span>
+                                <b>Developer Name - </b> {{envrn.developer}}
+                            </span><br>
+                            <span>
+                                <b>Current Database - </b> {{envrn.database}}
+                            </span>
+                        </span>
+                    </td>
+                    <td>
+                        <br>
+                        <select title="Select DB System"
+                                ng-style="{'width': 130 + 'px'}"
+                                ng-model="ctrl.selectedSystem[$index]"
+                                ng-options="system.name for system in ctrl.listSystems"
+                                ng-change="ctrl.changeDB($index)">
+                        </select>
+                    </td>
+                    <td>
+                        <br>
+                        <select title="Select DB"
+                                ng-style="{'width': 200 + 'px'}"
+                                ng-model="ctrl.dbSelectedList[$index]"
+                                ng-options="dbName for dbName in ctrl.dbShowList[$index]">
+                        </select>
+                    </td>
+                    <td>
+                        <br>
+                        <button class="btn btn-success" ng-click="ctrl.applyChanges($index, envrn)">
+                            Apply
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title>MegingJord</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/AngularJS-Toaster/toaster.css" />
+  <link rel="stylesheet" href="bower_components/angularjs-toaster/toaster.css" />
+
+  <!-- build:css(.tmp) styles/main.css -->
+<!--
+  <link rel="stylesheet" href="css/app.css">
+-->
+<!--
+  <link rel="stylesheet" href="styles/main.css"/>
+-->
+  <link rel="stylesheet/less" type="text/css" href="styles/main.less" />
+  <link rel="stylesheet" href="bower_components/AngularJS-Toaster/toaster.scss"/>
+  <!-- endbuild -->
+</head>
+<body ng-app="yapp">
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<div class="">
+  <div ui-view></div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.2/less.min.js" ></script>
+<script src="bower_components/es5-shim/es5-shim.js"></script>
+<script src="bower_components/json3/lib/json3.js"></script>
+<!--
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.2/less.min.js" ></script>
+-->
+
+<!-- bower:js -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-mocks/angular-mocks.js"></script>
+<script src="bower_components/ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/AngularJS-Toaster/toaster.js"></script>
+<script src="bower_components/angularjs-toaster/toaster.js"></script>
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/login.js"></script>
+<script src="scripts/controllers/dashboard.js"></script>
+<script src="scripts/controllers/environment.js"></script>
+<script src="scripts/controllers/dbchange.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
+<!--Service-->
+<script src="scripts/ipConfig.js"></script>
+<script src="scripts/configService.js"></script>
+<script src="scripts/services/environmentService.js"></script>
+<!-- endbuild -->
+</body>
+</html>
