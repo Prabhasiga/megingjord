@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f818d324-79d7-4315-b789-548e40c3fe87" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megingjord.js" afterPath="$PROJECT_DIR$/megingjord.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-    </list>
+    <list default="true" id="f818d324-79d7-4315-b789-548e40c3fe87" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -297,12 +294,12 @@
       <workItem from="1525332349552" duration="1024000" />
       <workItem from="1525424147280" duration="115000" />
       <workItem from="1525593298518" duration="155000" />
-      <workItem from="1525666688842" duration="7786000" />
+      <workItem from="1525666688842" duration="7860000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81768000" />
+    <option name="totallyTimeSpent" value="81842000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1920" height="1043" extended-state="6" />
